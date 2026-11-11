@@ -8,7 +8,7 @@
 <body class="bg-light">
 <nav class="navbar navbar-dark bg-dark"><div class="container"><a class="navbar-brand" href="{{ route('events.index') }}">EventManager</a></div></nav>
 <main class="container py-4">
-  @if(session('status'))<div class="alert alert-success">{{ session('status') }}</div>@endif
+  @if(session('success'))<div class="alert alert-success">{{ session('success') }}</div>@endif
   @yield('content')
 </main>
 </body></html>

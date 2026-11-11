@@ -9,14 +9,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->renameColumn('iamge', 'image');
+            $table->string('image')->nullable()->after('description');
         });
     }
 
     public function down(): void
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->renameColumn('image', 'iamge');
+            $table->dropColumn('image');
         });
     }
 };

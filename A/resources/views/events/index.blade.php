@@ -30,7 +30,7 @@
 
             <!-- CATEGORY FILTER -->
             <div class="col-md-3 mb-2">
-                <select name="category" class="form-control">
+                <select name="category" class="form-select">
                     <option value="">All Categories</option>
 
                     <option value="Conference"
@@ -52,7 +52,7 @@
 
             <!-- STATUS FILTER -->
             <div class="col-md-3 mb-2">
-                <select name="status" class="form-control">
+                <select name="status" class="form-select">
                     <option value="">All Statuses</option>
 
                     <option value="Upcoming"
@@ -74,7 +74,7 @@
 
             <!-- FILTER BUTTON -->
             <div class="col-md-2 mb-2">
-                <button type="submit" class="btn btn-primary btn-block">
+                <button type="submit" class="btn btn-primary w-100">
                     Filter
                 </button>
             </div>
@@ -88,18 +88,12 @@
 </form>
 
 
-    <!-- SUCCESS MESSAGE -->
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
 
     <!-- EVENTS TABLE -->
     <div class="table-responsive">
         <table class="table table-striped table-bordered">
 
-            <thead class="thead-dark">
+            <thead class="table-dark">
                 <tr>
                     <th>Image</th>
                     <th>Title</th>
