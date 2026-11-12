@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cooking class booking</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body>
+<header><h1>Cooking Classes</h1><p>Scenario C4: Form handling and 422 JSON validation</p></header><main><section class="panel"><h2>Book your class</h2><p class="muted">Practice-only endpoint: POST /api/bookings — not in official Module B.</p><form id="form" novalidate>
+<div class="field"><label for="recipeId">Recipe</label><select id="recipeId" name="recipe_id" required><option value="">Select a recipe</option></select><small class="error" data-error="recipe_id"></small></div>
+<div class="field"><label for="name">Your name</label><input id="name" name="name" required><small class="error" data-error="name"></small></div>
+<div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required><small class="error" data-error="email"></small></div>
+<div class="field"><label for="date">Class date (after today)</label><input id="date" type="date" name="date" required><small class="error" data-error="date"></small></div>
+<div class="field"><label for="people">Number of people</label><input id="people" type="number" name="people" min="1" max="12" value="1" required><small class="error" data-error="people"></small></div>
+<button id="submit" type="submit">Book cooking class</button><p id="status" role="status" class="status"></p></form></section></main></body></html>
